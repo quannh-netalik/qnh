@@ -31,7 +31,8 @@
     "start:watch": "tsc -w",
     "start:dev": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src/index.ts\"",
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "compile": "tsc -p ."
   },
   "author": "Nguyen Huu Quan <quannh.netalik@gmail.com> (https://github.com/quannh-netalik)",
   "license": "MIT",
