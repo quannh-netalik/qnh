@@ -1,14 +1,18 @@
-import boxen from 'boxen';
-import chalk from 'chalk';
-import inquirer from 'inquirer';
+#!/usr/bin/env node
 
-import data from './box-data';
-import questions from './questions';
+const boxen = require('boxen');
+const chalk = require('chalk');
+
+const box = require('./box');
+const promptQuestions = require('./questions');
 
 // clear the terminal
 process.stdout.write('\x1B[2J\x1B[0f');
 
-const self = boxen(data, {
+/**
+ * PRINT THE TABLE
+ */
+const self = boxen(box, {
   margin: 1,
   float: 'center',
   padding: 1,
@@ -16,7 +20,6 @@ const self = boxen(data, {
   borderColor: 'green',
   title: 'Information',
 });
-
 process.stdout.write(`${self}\n`);
 
 const tip = `Tip: Try ${chalk.cyanBright.bold(
@@ -24,5 +27,7 @@ const tip = `Tip: Try ${chalk.cyanBright.bold(
 )} on the links above\n`;
 process.stdout.write(`${tip}\n`);
 
-const prompt = inquirer.createPromptModule();
-prompt(questions).then((answers) => answers.action());
+/**
+ * PROMPT QUESTIONS
+ */
+promptQuestions();
