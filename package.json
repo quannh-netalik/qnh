@@ -1,6 +1,6 @@
 {
   "name": "qnh",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "QuanNH (Titus) personal description card",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
