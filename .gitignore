@@ -43,3 +43,8 @@ config/local.yaml
 .env
 
 .npmrc
+
+# lock file
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

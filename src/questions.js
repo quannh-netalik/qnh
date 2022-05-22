@@ -1,13 +1,10 @@
 import config from 'config';
 import chalk from 'chalk';
 import open from 'open';
-import { QuestionCollection } from 'inquirer';
 
-import { ISelfReferences } from './interfaces';
+const { gmail, portfolio } = config.get('personal.references');
 
-const { gmail, portfolio } = config.get<ISelfReferences>('personal.references');
-
-const questions: QuestionCollection[] = [
+const questions = [
   {
     type: 'list',
     name: 'action',

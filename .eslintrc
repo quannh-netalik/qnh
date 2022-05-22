@@ -1,5 +1,6 @@
 {
   "env": {
+    "browser": true,
     "es2021": true,
     "node": true
   },
@@ -12,10 +13,8 @@
     "plugin:security/recommended",
     "prettier"
   ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "tsconfig.json",
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": [
@@ -26,30 +25,7 @@
   ],
   "root": true,
   "rules": {
-    "class-methods-use-this": "off",
-    "import/extensions": ["error", "never"],
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": ["**/*.test.ts", "**/*.spec.ts", "**/*.e2e-spec.ts"]
-      }
-    ],
-    "import/order": ["error", { "newlines-between": "always" }],
-    "import/prefer-default-export": "off",
-    "max-lines": ["error", 300],
-    "no-console": "off",
-    "no-useless-constructor": "off",
-    "simple-import-sort/exports": "error"
-  },
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts"]
-    },
-    "import/resolver": {
-      "typescript": {}
-    }
+    "import/extensions": "off",
+    "no-console": "off"
   }
 }

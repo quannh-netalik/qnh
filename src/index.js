@@ -2,8 +2,8 @@ import boxen from 'boxen';
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 
-import data from './box-data';
-import questions from './questions';
+import data from './box-data.js';
+import questions from './questions.js';
 
 // clear the terminal
 process.stdout.write('\x1B[2J\x1B[0f');

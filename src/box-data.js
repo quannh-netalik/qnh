@@ -1,8 +1,6 @@
 import chalk from 'chalk';
 import config from 'config';
 
-import { IReferenceSites, ISelfInformation } from './interfaces';
-
 // Label for each information
 const label = {
   gmail: chalk.white.bold('Gmail:'.padStart(10, ' ')),
@@ -17,10 +15,9 @@ const {
   name,
   title,
   references: { gmail, github, linkedin, npx, phone, skype },
-} = config.get<ISelfInformation>('personal');
+} = config.get('personal');
 
-const { linkedinRef, githubRef, skypeRef } =
-  config.get<IReferenceSites>('reference-sites');
+const { linkedinRef, githubRef, skypeRef } = config.get('reference-sites');
 
 const link = {
   linkedin: chalk.grey(linkedinRef) + chalk.magentaBright(linkedin),
